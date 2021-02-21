@@ -1,0 +1,36 @@
+from math import factorial 
+numeros=[]
+
+for i in range(5):
+  numero =float(input("introduce una edad:".format(i +1)))
+  numeros.append(numero)
+  
+
+mayor= numeros[0]
+for numero in numeros: 
+  if numero > mayor:
+    mayor= numero
+
+menor= numeros[0]
+for numero in numeros:
+  if numero < menor:
+    menor = numero
+
+pares=[]
+impares=[]
+for numero in numeros:
+  if numero%2==0:
+    pares.append(numero)
+  else:
+    impares.append(numero)
+fac=[]
+for numero in numeros:
+  if factorial(numero):
+   fac.append(numero)
+#media= sum(numeros) / 25
+
+print("Mayor:", mayor)
+print("Menor:", menor)
+print("Pares:", len(pares))
+print("Impares:", len(impares))
+print("Factorial:", fac)
